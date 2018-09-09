@@ -54,6 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = false;
 
 $route['login']                                         ='Sistemas/Logins/Logins';
+$route['logout']                                        ='Sistemas/Logins/Logins/logout';
 $route['registro']                                      ='Logins/Logins/registro';
-$route['chat/(:num)']                                   = 'chat/index/(:num)';
 $route['principal']                                     ='Sistemas/Principais';
+$route['usuario']                                      ='Usuarios/Usuarios';
+$route['usuario/perfil']                               ='Usuarios/Usuarios/setting';
+$route['chat/(:num)']                                   = 'chat/index/(:num)';

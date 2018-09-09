@@ -14,7 +14,7 @@ class Usuario extends CI_Model {
         $data = $user->row_array();
         $user_array = $user->row_array();
 
-        if ($user->num_rows() > 0) {
+        if ($user->num_rows() <> NULL) {
             if ($user_array['is_activated'] == '1') {
                 $this->session->set_userdata([
                     'user_id' => $data['id'],
@@ -24,8 +24,7 @@ class Usuario extends CI_Model {
                 ]);
                 return 1;
             } else {
-                $this->session->set_userdata('error', 'Peça ao administrador para verificar sua conta!!');
-                redirect('auth/login');
+                return 2;
             }
         } else {
             return 0;
@@ -53,6 +52,12 @@ class Usuario extends CI_Model {
         $this->db->update('users', ['is_logged_in' => 1, 'last_login' => date('Y-m-d')]);
 
         return 1;
+    }
+    
+    public function buscaIdUsuario($user_id){
+       $usuario= $this->db->select('email, first_name, last_name, division, avatar')
+                ->get_where('users',['id' => $user_id]);
+        
     }
 }
 

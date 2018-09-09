@@ -1,17 +1,22 @@
 <?php
 
-class User extends CI_Controller
+/**
+ * @property Usuario $Usuario Usuario
+ */
+
+class Usuarios extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('User_model');
-        $this->user = $this->User_model;
+        $this->load->model('Usuario/Usuario');
+       
+       
     }
 
     public function index()
     {
-        redirect('user/setting');
+        redirect('Usuarios/setting');
     }
 
     public function activate()
@@ -20,7 +25,7 @@ class User extends CI_Controller
 
         $this->db->where('id', $id);
         $this->db->update('users', ['is_activated' => '1']);
-        redirect('dashboard');
+        redirect('principal');
     }
 
     public function add()
@@ -67,23 +72,24 @@ class User extends CI_Controller
 
             $this->session->set_userdata('avatar', $data['avatar']);
 
-            redirect('dashboard');
+            redirect('principal');
         } elseif (isset($_POST['submit_request_photo'])) {
             /* Button foto on view */
             $id = $this->uri->segment(3);
 
-            $data['record'] = $this->user->getOne($id)->row_array();
+            $data['record'] = $this->Usuario->getOne($id)->row_array();
             $data['photo'] = 1;
 
-            $this->template->load('template/main_template', 'user/setting/index', $data);
+            $this->template->load('template/main_template', 'usuarios/setting/perfil', $data);
         } else {
             /* Button foto on view */
             $id = $this->uri->segment(3);
 
-            $data['record'] = $this->user->getOne($id)->row_array();
+            $data['record'] = $this->Usuario->getOne($id)->row_array();
             $data['photo'] = 0;
 
-            $this->template->load('template/main_template', 'user/setting/index', $data);
+            $this->template->load('template/principal', 'usuarios/setting/perfil', $data);
+           
         }
     }
 }

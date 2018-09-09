@@ -74,7 +74,7 @@ class Logins extends CI_Controller {
 
     public function logout() {
         $this->db->where('id', $this->session->userdata('user_id'));
-        $this->db->update('users', ['is_logged_in' => 0]);
+              $this->db->update('users', ['is_logged_in' => 0]);
 
         $this->session->sess_destroy();
 

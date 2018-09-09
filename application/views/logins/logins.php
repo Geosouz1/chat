@@ -1,6 +1,14 @@
 <div class="row">    
-    <div class="col-sm-8"></div>
-    <div class="col-sm-4">    
+    <div class="col-sm-6 alert-success caderno" style="opacity: 0.99; ">
+        <div class="caderno_text">
+            <h1 style="font-family: arial"><b> O portal do conhecimento!</b></h1>
+            <br>
+            <h3><span class="glyphicon glyphicon-search"> Pesquisas</span> </h3>
+            <h3><span class="glyphicon glyphicon-pencil"> Utilitarios</span> </h3>
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4 " style="opacity: 0.99;">    
         <div class="panel panel-default">
             <div class="panel-body">
                 <?php
@@ -8,7 +16,7 @@
                 echo $error;
                 $this->session->unset_userdata('error');
                 ?>
-                <h2 class="form-signin-heading text-center">Chat da Galera</h2>
+                <h2 class="form-signin-heading text-center"><b>S</b>tudy<b>B</b>ox</h2>
                 <br>
 
                 <input type="text" name="username" class="form-control" placeholder="Nome" required autofocus>

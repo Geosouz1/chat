@@ -103,20 +103,6 @@
             ?>
             </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <img src="/uploads/avatars/<?= $this->session->userdata('avatar'); ?>" height="25" width="30" />
-                  <?php echo $this->session->userdata('first_name'); ?>
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li><?php echo anchor('user/setting/'.$this->session->userdata('user_id'), 'Configurações'); ?></li>
-                <li role="separator" class="divider"></li>
-                <li><?php echo anchor('auth/logout', 'Sair'); ?></li>
-              </ul>
-            </li>
-          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>

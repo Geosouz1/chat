@@ -4,9 +4,42 @@
   <head>
       <style>
       body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background: url("/assets/images/study.jpg") no-repeat bottom center scroll;
+  background-position: 30% 45%;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.caderno {
+  background-image: url("/assets/images/caderno.jpg");
+  background-color: #000000;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.caderno_text {
+  text-align: center;
+  font-family: serif;
+  font-size: 18xp;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
     
-    background-image: url("/assets/images/floresta.jpg")
-      }
+      
     </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
