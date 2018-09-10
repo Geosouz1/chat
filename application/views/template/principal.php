@@ -62,7 +62,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#">
                             <i class="fa fa-comments-o"></i>
-                            <span class="badge badge-danger navbar-badge">3</span>
+                            <span class="badge badge-danger navbar-badge"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 
@@ -73,7 +73,6 @@
                                     <img src="/assets/images/avatar/default.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                     <div class="media-body">
                                         <h3 class="dropdown-item-title">
-                                            Rosilene
                                             <span class="float-right text-sm text-muted"><i class="fa fa-star"></i></span>
                                         </h3>
                                         <p class="text-sm">I got your message bro</p>
@@ -158,7 +157,7 @@
                 <a href="<?= base_url('principal') ?>" class="brand-link">
                     <img src="/assets/images/avatar/<?= $this->session->userdata('avatar'); ?>"  alt="" class="brand-image img-circle elevation-3"
                          style="opacity: .8">
-                    <span class="brand-text font-weight-light"><b>D</b>a<b>G</b>alera
+                    <span class="brand-text font-weight-light"><b>S</b>tudy<b>B</b>ox
                 </a>
 
                 <!-- Sidebar -->
@@ -220,7 +219,7 @@
                                     </li>
                                 </ul>
                             </li>
-                           
+
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fa fa-edit"></i>
@@ -250,36 +249,14 @@
                                     </li>
                                 </ul>
                             </li>
-                         
-                            <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fa fa-table"></i>
-                                    <p>
-                                        Tables
-                                        <i class="fa fa-angle-left right"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="pages/tables/simple.html" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Simple Tables</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="pages/tables/data.html" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Data Tables</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+
+
                             <li class="nav-header">EXAMPLES</li>
                             <li class="nav-item">
                                 <a href="pages/calendar.html" class="nav-link">
                                     <i class="nav-icon fa fa-calendar"></i>
                                     <p>
-                                        Calendar
+                                        Agenda
                                         <span class="badge badge-info right">2</span>
                                     </p>
                                 </a>
@@ -288,7 +265,7 @@
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fa fa-envelope-o"></i>
                                     <p>
-                                        Mailbox
+                                        Caixa de E-mail
                                         <i class="fa fa-angle-left right"></i>
                                     </p>
                                 </a>
@@ -317,7 +294,7 @@
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fa fa-book"></i>
                                     <p>
-                                        Pages
+                                        Escritório
                                         <i class="fa fa-angle-left right"></i>
                                     </p>
                                 </a>
@@ -325,31 +302,19 @@
                                     <li class="nav-item">
                                         <a href="pages/examples/invoice.html" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Invoice</p>
+                                            <p>Texto</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="pages/examples/profile.html" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Profile</p>
+                                            <p>Planilha</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="pages/examples/login.html" class="nav-link">
                                             <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Login</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="pages/examples/register.html" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Register</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="pages/examples/lockscreen.html" class="nav-link">
-                                            <i class="fa fa-circle-o nav-icon"></i>
-                                            <p>Lockscreen</p>
+                                            <p>Slide</p>
                                         </a>
                                     </li>
                                 </ul>
@@ -358,7 +323,7 @@
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fa fa-plus-square-o"></i>
                                     <p>
-                                        Extras
+                                        Editor de Imagens
                                         <i class="fa fa-angle-left right"></i>
                                     </p>
                                 </a>
@@ -389,32 +354,14 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-header">MISCELLANEOUS</li>
+                            <li class="nav-header">Divre</li>
                             <li class="nav-item">
                                 <a href="https://adminlte.io/docs" class="nav-link">
                                     <i class="nav-icon fa fa-file"></i>
-                                    <p>Documentation</p>
+                                    <p>Arquivos</p>
                                 </a>
                             </li>
-                            <li class="nav-header">LABELS</li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fa fa-circle-o text-danger"></i>
-                                    <p class="text">Important</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fa fa-circle-o text-warning"></i>
-                                    <p>Warning</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fa fa-circle-o text-info"></i>
-                                    <p>Informational</p>
-                                </a>
-                            </li>
+                            <li class="nav-header">Customização</li>
                             <li class="nav-item">
                                 <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
                                         class="fa fa-th-large"></i></a>
