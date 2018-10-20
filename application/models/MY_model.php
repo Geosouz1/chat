@@ -229,7 +229,7 @@ class MY_model extends CI_Model {
                     ->create_table("uri_segments");
         }
 
-        if (!$this->db->table_exists("users")) {
+        if (!$this->db->table_exists("usuario")) {
             $fields = [
                 'id' => [
                     'type' => 'INT',
@@ -246,7 +246,7 @@ class MY_model extends CI_Model {
                     'type' => 'TEXT',
                     'null' => FALSE
                 ],
-                'role' => [
+                'funcao' => [
                     'type' => 'INT',
                     'constraint' => 1,
                     'null' => FALSE,
@@ -264,27 +264,34 @@ class MY_model extends CI_Model {
                     'type' => 'TEXT',
                     'null' => FALSE
                 ],
-                'division' => [
-                    'type' => 'VARCHAR',
-                    'constraint' => 100,
-                    'null' => FALSE
-                ],
                 'avatar' => [
                     'type' => 'TEXT',
                     'null' => FALSE
                 ],
-                'is_logged_in' => [
+                'logado' => [
                     'type' => 'INT',
                     'constraint' => 1,
                     'null' => TRUE,
                     "default" => 1
                 ],
-                'is_activated' => [
+                'ativo' => [
                     'type' => 'INT',
                     'constraint' => 1,
                     'null' => TRUE,
                     "default" => NULL
-                ]
+                ],
+                'last_login' => [
+                    'type' => 'TIMESTAMP',
+                     'constraint' => 1,
+                    'null' => TRUE,
+                    "default" => NULL
+                ],
+                'data_insert' => [
+                    'type' => 'TIMESTAMP',
+                     'constraint' => 1,
+                    'null' => TRUE,
+                    "default" => NULL
+                ],
             ];
             $this->dbforge->add_field($fields)
                     ->add_field("last_login TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP")

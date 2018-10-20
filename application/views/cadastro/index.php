@@ -1,3 +1,4 @@
+<div class="row">
 <table class="table table-bordered">
     <h2>Form Registrasi</h2>
 
@@ -38,3 +39,4 @@
     </tbody>
     <?php echo form_close(); ?>
 </table>
+    <
