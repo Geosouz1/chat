@@ -13,7 +13,7 @@ class Usuario extends CI_Model {
      */
     public function autenticar($username, $password) {
         
-        $data = $this->db->select("id,name,password,email,first_name,avatar,logado,ativo,")
+        $data = $this->db->select("id,username,password,email,first_name,avatar,logado,ativo,")
                 ->get_where('usuario', ['username' => $username, 'password' => $password])->row();;
 
               return $data;
