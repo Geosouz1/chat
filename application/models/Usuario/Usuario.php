@@ -22,7 +22,7 @@ class Usuario extends CI_Model {
        public function get($user_id)
     {
         $this->db->select();
-        $this->db->from('users as users');
+        $this->db->from('usuario as users');
         $this->db->where('users.id != ', $user_id);
         $this->db->where('users.id != 0');
         return $this->db->get();
@@ -37,14 +37,14 @@ class Usuario extends CI_Model {
     public function logged($user_id)
     {
         $this->db->where('id', $user_id);
-        $this->db->update('users', ['is_logged_in' => 1, 'last_login' => date('Y-m-d')]);
+        $this->db->update('usuario', ['logado' => 1, 'last_login' => date('Y-m-d')]);
 
         return 1;
     }
     
     public function buscaIdUsuario($user_id){
-       $usuario= $this->db->select('email, first_name, last_name, division, avatar')
-                ->get_where('users',['id' => $user_id]);
+       $usuario= $this->db->select('email, first_name, last_name, avatar')
+                ->get_where('usuario',['id' => $user_id]);
         
     }
 }

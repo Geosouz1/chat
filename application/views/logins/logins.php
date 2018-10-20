@@ -12,7 +12,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <?php
-                echo form_open('logins', ['class' => 'form-signin']);
+                echo form_open('login', ['class' => 'form-signin']);
                 echo $error;
                 $this->session->unset_userdata('error');
                 ?>

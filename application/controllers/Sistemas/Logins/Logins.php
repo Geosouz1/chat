@@ -20,15 +20,13 @@ class Logins extends CI_Controller {
             $usuario = $this->Usuario->autenticar($username, $password);
 
 
-            if (empty($usuario)) {
+            if (!empty($usuario)) {
                 if ($usuario->ativo == '1') {
                     $this->session->set_userdata([
                         'user_id' => $usuario->id,
                         'first_name' => $usuario->first_name,
-                        'avatar' => $$usuario->avatar,
-                        'funcao' => $usuario->funcao
-                    ]);
-                    var_dump($usuario);
+                        'avatar' => $usuario->avatar
+                    ]); 
                     $this->session->set_userdata('login_status', 'ok');
                     $this->Usuario->logged($this->session->userdata('user_id'));
                     redirect('principal');
