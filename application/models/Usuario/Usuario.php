@@ -22,16 +22,16 @@ class Usuario extends CI_Model {
        public function get($user_id)
     {
         $this->db->select();
-        $this->db->from('usuario as users');
-        $this->db->where('users.id != ', $user_id);
-        $this->db->where('users.id != 0');
+        $this->db->from('usuario as usuario');
+        $this->db->where('usuario.id != ', $user_id);
+        $this->db->where('usuario.id != 0');
         return $this->db->get();
     }
 
     public function getOne($id)
     {
         $this->db->where('id', $id);
-        return $this->db->get('users');
+        return $this->db->get('usuario');
     }
 
     public function logged($user_id)

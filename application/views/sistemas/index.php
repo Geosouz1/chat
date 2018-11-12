@@ -19,7 +19,7 @@
     foreach ($record->result() as $r) {
         $no++;
 
-        if ($r->is_logged_in == 1) {
+        if ($r->ativo == 1) {
             $logged_status = '<b> > <u>Online</b>';
         } else {
             $logged_status = 'Offline';

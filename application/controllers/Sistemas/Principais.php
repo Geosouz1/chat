@@ -29,7 +29,7 @@ class Principais extends CI_Controller
             $this->template->load('template/principal', 'sistemas/index', $data);
             
         } else {
-            $data['record'] = $this->db->get('users');
+            $data['record'] = $this->db->get('usuario');
             $this->template->load('template/main_template', 'sistemas/admin/index', $data);
         }
     }
