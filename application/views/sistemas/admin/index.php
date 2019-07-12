@@ -18,7 +18,7 @@
     $aktif_status = '';
     $button_activate = '';
     foreach ($record->result() as $r) {
-        if ($r->is_activated == 1) {
+        if ($r->ativo == 1) {
             $aktif_status = 'Aktif';
             $button_activate = '';
         } else {
@@ -32,7 +32,7 @@
             <td>$r->email</td>
             <td>$r->first_name</td>
             <td>$r->last_name</td>
-            <td>$r->division</td>
+            <td>$aktif_status</td>
             <td>$aktif_status</td>
             <td>".
                 $button_activate

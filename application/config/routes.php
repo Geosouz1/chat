@@ -53,10 +53,10 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = false;
 
-$route['login']                                                               = 'Sistemas/Logins/Logins/index';
-$route['logout']                                                              = 'Sistemas/Logins/Logins/logout';
-$route['login/registro']                                                      = 'Sistemas/Logins/Logins/registro';
-$route['principal']                                                           = 'Sistemas/Principais';
+$route['login']                                                               = 'Sistemas/Sistemas/login';
+$route['logout']                                                              = 'Sistemas/Sistemas/logout';
+$route['login/registro']                                                      = 'Sistemas/Sistemas/registro';
+$route['principal']                                                           = 'Sistemas/Sistemas';
 $route['usuario']                                                             = 'Usuarios/Usuarios';
 $route['usuario/perfil']                                                      = 'Usuarios/Usuarios/setting';
 $route['chat/(:num)']                                                         = 'chat/index/(:num)'; 
